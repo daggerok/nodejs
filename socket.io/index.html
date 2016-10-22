@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="vendors/socket.io-client/socket.io.js"></script>
+</head>
+<body class="container-fluid">
+  <div class="container">
+    <span id="greeting" class="text-warning success">
+      <button id="clear" type="button" class="btn btn-circle">X</button>
+      Welcome,<input id="username" autocomplete="off" value="anonymous"/>
+    </span>
+    <div class="container messages">
+      <input id="input" autocomplete="off" class="success"/>
+      <ul id="messages" class="container-fliud"></ul>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

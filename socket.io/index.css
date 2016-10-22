@@ -1,0 +1,57 @@
+body { 
+  font: Helvetica, Arial; 
+}
+
+div .container {
+  overflow: scroll;
+  padding: 1%;
+  bottom: 0;
+  width: 100%;
+}
+
+input {
+  padding: 0.5%;
+  margin: 0.5%;
+}
+
+#username {
+  border: 0;
+  width: 50%;
+}
+
+#input {
+  border: 1;
+  padding: 1%;
+  width: 98%;
+}
+
+#messages { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+#messages li { 
+  width: 98%;
+  padding: 1%; 
+}
+
+.messages li {
+  width: 98%;
+  margin: 0.5%; 
+  padding: 1%;
+}
+
+#messages .zebra { 
+  background: #f5f5f5; 
+}
+
+.btn-circle {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  border-radius: 15px;
+}
