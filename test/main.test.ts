@@ -1,1 +1,1 @@
-import './modules/Models.test'
+import './modules/Models.test';

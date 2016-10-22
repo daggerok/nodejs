@@ -9,15 +9,29 @@
     "postinstall": "npm run typings",
     "typings:mocha": "typings install mocha --save --ambient",
     "typings:chai": "typings install chai --save --ambient",
-    "typings": "npm-run-all typings:*",
-    "mocha": "npm i && mocha --recursive --compilers ts:ts-node/register",
-    "build": "npm i && tsc --outDir dist test/main.test.ts",
-    "once": "npm i && node index.js",
-    "dev": "npm i && nodemon index.js -w index.js -w src",
-    "lint": "npm i && tslint 'src/**/*.ts'",
-    "cover": "npm i && istanbul cover node_modules/mocha/bin/_mocha -- --compilers ts:ts-node/register test/**/*.test.ts",
+    "typings": "echo 'typings are disabled'",
+    "mocha": "mocha --recursive --compilers ts:ts-node/register",
+    "build": "tsc --outDir dist test/main.test.ts",
+    "once": "node index.js",
+    "dev": "nodemon index.js -w index.js -w src",
+    "lint": "tslint 'src/**/*.ts'",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers ts:ts-node/register test/**/*.test.ts",
     "test": "npm run mocha",
     "start": "npm run mocha -- -w"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
+    "chai": "^3.5.0",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.9.1",
+    "npm-run-all": "^3.1.1",
+    "ts-node": "^1.6.0",
+    "tslint": "^3.6.0",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
   },
   "tslintConfig": {
     "rules": {
@@ -96,7 +110,7 @@
       "radix": true,
       "semicolon": [
         true,
-        "never"
+        "always"
       ],
       "switch-default": true,
       "trailing-comma": false,
@@ -134,18 +148,6 @@
         "check-type"
       ]
     }
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "isparta": "^4.0.0",
-    "istanbul": "^0.4.2",
-    "mocha": "^3.1.2",
-    "nodemon": "^1.9.1",
-    "npm-run-all": "^3.1.1",
-    "ts-node": "^1.6.0",
-    "tslint": "^3.6.0",
-    "typescript": "^1.8.9",
-    "typings": "^0.7.9"
   },
   "description": "node.js maps",
   "main": "index.js",

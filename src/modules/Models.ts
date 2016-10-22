@@ -1,8 +1,8 @@
 export namespace Models {
   export interface User {
-    firstName: string
-    lastName: string
+    firstName: string;
+    lastName: string;
   }
 }
 
-export default Models
+export default Models;
