@@ -1,0 +1,35 @@
+{
+  "name": "babel-node-express-server",
+  "description": "Node and Express using Babel ES6",
+  "main": "server.es6",
+  "authors": [
+    "Maksim Kostromin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "babel",
+    "node-babel",
+    "ES6",
+    "express",
+    "morgan",
+    "handlebars",
+    "hbs"
+  ],
+  "homepage": "https://github.com/daggerok/babel-node-express-server",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

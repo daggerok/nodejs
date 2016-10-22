@@ -1,6 +1,8 @@
 nom-debug.log*
+static/vendor/
 node_modules/
 .DS_Store
 coverage/
 .idea/
 dist/
+*.js
