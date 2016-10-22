@@ -2,32 +2,49 @@
   "name": "nodejs",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "sleep": "sleep 1",
-    "prestart": "npm i",
-    "server": "node ./bin/www",
-    "open-url": "npm-run-all sleep open",
-    "open": "open-url http://localhost:3000",
-    "build": "echo 'the build (not implemented)'",
-    "start": "npm-run-all -p server open"
+  "main": "index.js",
+  "local-web-server": {
+    "port": 3000,
+    "forbid": "*.json"
   },
-  "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.13.4",
-    "hbs": "~4.0.0",
-    "morgan": "~1.7.0",
+  "scripts": {
+    "serve": "ws",
+    "sleep": "sleep 1",
+    "clean": "rm -rf dist/",
+    "postinstall": "npm prune",
+    "mkdir-dist": "mkdir -p dist",
+    "open-url": "npm-run-all -p sleep open",
+    "open": "open-url http://localhost:3000",
+    "build": "npm-run-all mkdir-dist browserify",
+    "start": "npm-run-all mkdir-dist start-and-open-url",
+    "serve-and-watchify": "npm-run-all -p serve watchify",
+    "start-and-open-url": "npm-run-all -p open-url serve-and-watchify",
+    "browserify": "browserify main.ts -p [ tsify -m --noImplicitAny ] -d -v -o dist/bundle.js",
+    "watchify": "watchify main.ts -p [ tsify -m --noImplicitAny ] -o dist/bundle.js -d -v --delay 100 --fast=true"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "bootstrap": "^3.3.6",
+    "browserify": "^13.0.0",
+    "local-web-server": "^1.1.1",
     "npm-run-all": "^3.1.1",
     "open-url": "^2.0.2",
-    "serve-favicon": "~2.3.0",
-    "stylus": "0.54.5"
+    "tsify": "^2.0.2",
+    "typescript": "^2.0.3",
+    "watchify": "^3.7.0"
   },
   "description": "node.js maps",
-  "main": "app.js",
-  "devDependencies": {},
+  "dependencies": {},
   "keywords": [
-    "node"
+    "node",
+    "tsify",
+    "watchify",
+    "browserify",
+    "es6",
+    "typescript",
+    "bootstrap",
+    "local-web-server"
   ],
   "author": "Maksim Kostromin <daggerok@gmail.com>",
   "license": "ISC",
