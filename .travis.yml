@@ -13,6 +13,8 @@ before_install:
   - sudo dpkg -i google-chrome*.deb
 script:
   - npm i
-  - npm run build
+  - npm test
+  - npm run cover
+  - npm run eslint
   - cat *.log | true
 cache.directories: node_modules/

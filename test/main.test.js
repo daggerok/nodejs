@@ -1,0 +1,6 @@
+import './modules/AnotherRactangle.test'
+import './modules/MochaChaiShould.test'
+import './modules/Rectangle.test'
+import './modules/RectangleES6.test'
+import './modules/generateNoteId.test'
+import './modules/main.test'
