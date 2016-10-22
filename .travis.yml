@@ -12,7 +12,8 @@ before_install:
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   - sudo dpkg -i google-chrome*.deb
 script:
-  - npm i
+  - npm test
   - npm run build
+  - npm run browser
   - cat *.log | true
 cache.directories: node_modules/
