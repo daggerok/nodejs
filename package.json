@@ -3,29 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "sleep": "sleep 1",
     "prestart": "npm i",
-    "server": "node ./bin/www",
-    "open-url": "npm-run-all sleep open",
-    "open": "open-url http://localhost:3000",
-    "build": "echo 'the build (not implemented)'",
-    "start": "npm-run-all -p server open"
+    "start": "lite-server"
+  },
+  "config": {
+    "bower_directory": "vendors"
   },
   "dependencies": {
-    "body-parser": "^1.15.1",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.3.3",
-    "express": "^4.14.0",
-    "hbs": "^4.0.0",
-    "morgan": "^1.7.0",
-    "npm-run-all": "^3.1.1",
-    "open-url": "^2.0.2",
-    "serve-favicon": "^2.3.0",
-    "stylus": "0.54.5"
+    "normalize.css": "^5.0.0"
   },
   "description": "node.js maps",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  },
   "keywords": [
     "node"
   ],

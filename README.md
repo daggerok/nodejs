@@ -1,4 +1,4 @@
-# nodejs [![build](https://travis-ci.org/daggerok/nodejs.svg?branch=master)](https://travis-ci.org/daggerok/nodejs)
+# js [![build](https://travis-ci.org/daggerok/nodejs.svg?branch=node-js)](https://travis-ci.org/daggerok/nodejs)
 
 ```bash
 npm i

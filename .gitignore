@@ -1,6 +1,8 @@
+!node_modules/normalize.css/normalize.css
+bower_components/
 nom-debug.log*
 node_modules/
 .DS_Store
-coverage/
+vendors/
 .idea/
 dist/
