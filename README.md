@@ -1,4 +1,4 @@
-# node-webkit [![build](https://travis-ci.org/daggerok/nodejs.svg?branch=node-webkit)](https://travis-ci.org/daggerok/nodejs)
+# nodejs [![build](https://travis-ci.org/daggerok/nodejs.svg?branch=master)](https://travis-ci.org/daggerok/nodejs)
 
 ```bash
 npm i
