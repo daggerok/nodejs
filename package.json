@@ -1,9 +1,10 @@
 {
   "name": "node-webkit",
   "version": "0.0.1",
-  "private": true,
+  "main": "nw.html",
   "scripts": {
-    "start": "nodemon bin/www -w . -i node_modules"
+    "start": "nw .",
+    "watch": "nodemon bin/www -w . -i node_modules"
   },
   "dependencies": {
     "normalize.css": "5.0.0"
@@ -21,11 +22,12 @@
     "morgan": "1.8.1",
     "nodemon": "1.11.0",
     "npm": "4.4.1",
+    "nw": "^0.21.1",
     "stylus": "0.54.5",
     "uglify-js": "2.8.12"
   },
-  "description": "```bash npm i npm start ```",
-  "main": "app.js",
+  "private": true,
+  "description": "node-webkit app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daggerok/nodejs.git"
